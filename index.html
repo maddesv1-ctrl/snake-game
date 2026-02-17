@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🐍 Maddes Snake</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="/music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div id="nameScreen">
+        <h1>🐍 Maddes Snake</h1>
+        <input 
+            type="text" 
+            id="playerNameInput" 
+            placeholder="Dein Name..." 
+            maxlength="15"
+            autocomplete="off"
+        >
+        <button id="startBtn">Spielen!</button>
+    </div>
+    
+    <div class="score-display">
+        <h1>🐍 Maddes Snake</h1>
+        <p>Score: <span id="scoreValue">0</span></p>
+    </div>
+    
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    
+    <div id="videoOverlay">
+        <video id="gameVideo" autoplay playsinline muted></video>
+    </div>
+    
+    <div id="gameOver">
+        <img src="/funny.jpg" alt="Game Over">
+        <h2>💀 Game Over</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <div id="gameOverLeaderboard"></div>
+        <button id="resetBtn">🔄 Erneut spielen</button>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
